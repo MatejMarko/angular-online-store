@@ -1,11 +1,46 @@
 .products-wrapper {
-  width: 80%;
-  height: 100%;
-  background-color: blue;
-  display: inline-block;
+  width: 100%;
 }
 
 .product {
   display: inline-block;
-  border: 1px solid white;
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.photo-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.product-quantity {
+  padding-left: 15px;
+}
+
+.product-price > span {
+  font-size: 13px;
+}
+
+.product-description {
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  padding-top: 8px;
 }

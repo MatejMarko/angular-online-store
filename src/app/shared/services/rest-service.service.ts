@@ -18,10 +18,6 @@ export class RestServiceService {
 
   authHttpRequest(path: string, bodyParams: any = {}): Promise<any> {
 
-    console.log('it\'s happening');
-    console.log('it\'s happening');
-    console.log('it\'s happening');
-
     const postUrl = 'http://localhost:4000';
     return new Promise((resolve, reject) => {
       this.http.post<any>(`${postUrl}/${path}`, bodyParams, this.httpOptions).subscribe(

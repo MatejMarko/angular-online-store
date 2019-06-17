@@ -1,8 +1,16 @@
 <div class="products-wrapper">
-  <div *ngFor="let product of listOfProducts" class="product">
-    Name: {{product.name}},
-    Description: {{product.description}},
-    Quantity: {{product.quantity}},
-    Price: {{product.price}},
+  <div *ngFor="let product of listOfProducts" class="product" (click)="goToProduct(product.id)">
+    <div class="photo-wrapper">
+      <img [src]="product.image" [attr.height]="preferredHeight+'px'" [attr.width]="preferredWidth+'px'"/>
+    </div>
+    <span class="product-name">{{product.name}}</span>
+    <div>
+      <span class="product-price">{{product.price}}<span> €</span></span>
+      <span class="product-quantity">{{product.quantity}}
+      <span *ngIf="product.quantity == 1"> product</span>
+      <span *ngIf="product.quantity > 1"> products</span>
+    left</span>
+    </div>
+    <span class="product-description">{{product.description}}</span>
   </div>
 </div>
