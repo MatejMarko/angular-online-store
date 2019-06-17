@@ -1,0 +1,11 @@
+.products-wrapper {
+  width: 80%;
+  height: 100%;
+  background-color: blue;
+  display: inline-block;
+}
+
+.product {
+  display: inline-block;
+  border: 1px solid white;
+}
