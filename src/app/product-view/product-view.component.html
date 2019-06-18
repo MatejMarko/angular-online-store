@@ -1,3 +1,14 @@
-<p>
-  product-view works!
-</p>
+<div class="product-wrapper">
+  <div class="image-wrapper">
+    <img [src]="productsService.selectedProduct.image" [attr.height]="'280px'" [attr.width]="'200px'">
+  </div>
+  <div class="other-wrapper">
+    <span>{{productsService.selectedProduct.name}}</span>
+    {{productsService.selectedProduct.description}}
+  </div>
+  <div class="price-wrapper">
+    <span>{{productsService.selectedProduct.price}}€</span>
+    <button>Add to cart</button>
+  </div>
+</div>
+

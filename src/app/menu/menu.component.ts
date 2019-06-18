@@ -42,6 +42,7 @@ export class MenuComponent implements OnInit {
   private changeCategory(id) {
     this.productsService.selectedCategoryId = id;
     this.productsService.getProductsFromCategoryTab();
+    this.productsService.showSelectedProduct = false;
   }
 
 }

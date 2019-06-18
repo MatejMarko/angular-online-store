@@ -1,0 +1,44 @@
+.product-wrapper {
+  display: flex;
+}
+
+.image-wrapper {
+  display: inline-block;
+}
+
+.image-wrapper > img {
+  object-fit: contain;
+}
+
+.other-wrapper {
+  display: inline-block;
+  width: 500px;
+  padding-left: 30px;
+}
+
+.other-wrapper > span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.price-wrapper {
+  display: inline-block;
+  width: 200px;
+  padding-left: 30px;
+}
+
+.price-wrapper > span {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.price-wrapper > button {
+  width: 150px;
+  color: black;
+  font-size: 18px;
+  padding: 8px;
+  background: white;
+  border: 3px solid black;
+  display: block;
+  cursor: pointer;
+}

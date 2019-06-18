@@ -11,6 +11,8 @@ export class ProductsService {
   selectedCategoryId = -1;
   selectedProductId = -1;
   listOfProducts: Product[] = [];
+  showSelectedProduct = false;
+  selectedProduct: Product = null;
 
   constructor(private restService: RestService) { }
 
@@ -19,6 +21,15 @@ export class ProductsService {
       this.listOfProducts = await this.getProducts();
     } else {
       this.listOfProducts = await this.getProductsByCategory(this.selectedCategoryId);
+    }
+  }
+
+  async setSelectedProduct() {
+    for (const product of this.listOfProducts) {
+      if (product.id === this.selectedProductId) {
+        this.selectedProduct = product;
+        this.showSelectedProduct = true;
+      }
     }
   }
 

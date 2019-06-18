@@ -24,6 +24,8 @@ export class ProductsListComponent implements OnInit {
 
   goToProduct(id) {
     console.log('go to project id: ' + id);
+    this.productsService.selectedProductId = id;
+    this.productsService.setSelectedProduct();
   }
 
 }
