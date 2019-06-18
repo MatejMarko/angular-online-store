@@ -5,7 +5,7 @@ import {APIResponse} from '../models/APIResponse';
 @Injectable({
   providedIn: 'root'
 })
-export class RestServiceService {
+export class RestService {
 
   private httpOptions = {
     headers: {

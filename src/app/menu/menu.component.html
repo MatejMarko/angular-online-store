@@ -1,5 +1,5 @@
 <div class="menu-wrapper">
-  <div *ngFor="let category of listOfCategories">
-    {{category.name}}
+  <div class="menu-option" *ngFor="let category of listOfCategories">
+    <span (click)="changeCategory(category.id)">{{category.name}}</span>
   </div>
 </div>

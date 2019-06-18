@@ -1,5 +1,5 @@
 <div class="products-wrapper">
-  <div *ngFor="let product of listOfProducts" class="product" (click)="goToProduct(product.id)">
+  <div *ngFor="let product of productsService.listOfProducts" class="product" (click)="goToProduct(product.id)">
     <div class="photo-wrapper">
       <img [src]="product.image" [attr.height]="preferredHeight+'px'" [attr.width]="preferredWidth+'px'"/>
     </div>

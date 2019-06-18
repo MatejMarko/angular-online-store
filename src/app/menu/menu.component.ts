@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Category} from '../shared/models/Category';
-import {Product} from '../shared/models/Product';
-import {RestServiceService} from '../shared/services/rest-service.service';
+import {RestService} from '../shared/services/rest-service.service';
+import {ProductsService} from '../shared/services/products.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
 
   listOfCategories: Category[] = [];
 
-  constructor(private restService: RestServiceService) { }
+  constructor(private restService: RestService, private productsService: ProductsService) { }
 
   async ngOnInit() {
     this.listOfCategories.push(new Category(0, 'Everything'));
@@ -37,6 +37,11 @@ export class MenuComponent implements OnInit {
     } catch (e) {
       return null;
     }
+  }
+
+  private changeCategory(id) {
+    this.productsService.selectedCategoryId = id;
+    this.productsService.getProductsFromCategoryTab();
   }
 
 }

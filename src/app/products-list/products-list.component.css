@@ -18,6 +18,10 @@
   display: block;
 }
 
+.photo-wrapper > img {
+  object-fit: contain;
+}
+
 .product-name {
   font-size: 15px;
   font-weight: bold;
